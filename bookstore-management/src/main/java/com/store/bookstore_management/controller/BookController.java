@@ -22,6 +22,7 @@ public class BookController {
     @PostMapping
     public Book addBook(@RequestBody Book book)
     {
+        System.out.println("Received Book: " + book);
         return bookService.addBook(book);
     }
 

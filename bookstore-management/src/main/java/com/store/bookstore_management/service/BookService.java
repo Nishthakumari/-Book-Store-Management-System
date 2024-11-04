@@ -18,7 +18,11 @@ public class BookService {
 
     public Book addBook(Book book)
     {
-        return bookRepository.save(book);
+        System.out.println("Received Book: " + book);
+        Book b =  bookRepository.save(book);
+        System.out.println("Received Book: " + b);
+        return b;
+
     }
 
     public void deleteBook(Long id)
